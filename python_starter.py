@@ -678,7 +678,9 @@ def Sorted(li):
 
 two_d.sort(key = Sorted, reverse = True)
 
+#USing lamda  shortand sort
 
+two_d.sort(key = lambda item : item[1])
 
 
 
