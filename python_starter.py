@@ -670,3 +670,15 @@ def Sorted(li):
     return ke_y
 
 two_d.sort(key = Sorted)
+
+## Sorting by the item key using normal function reverse order
+def Sorted(li):
+    ke_y = li[1]
+    return ke_y
+
+two_d.sort(key = Sorted, reverse = True)
+
+
+
+
+
