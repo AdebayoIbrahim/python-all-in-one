@@ -683,4 +683,11 @@ two_d.sort(key = Sorted, reverse = True)
 two_d.sort(key = lambda item : item[1])
 
 #        -----      PYTHON OOP(OBJECT-ORIENTED-PROGRAMMING)
+# object cosist of
+# properties : 
+#methods : the func of props
+#Classes: is like a class or blueprints of the object or attributes
+#using the classes we can create multiple INSTANCE of the object
+
+
 
