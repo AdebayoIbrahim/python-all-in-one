@@ -662,8 +662,11 @@ two_d = [["Ibrahim",80,"A"],
          ["Lateef",68,"B"],
          ["All",60,"B"]]
 
-two_d.sort()
+#two_d.sort()
 
+## Sorting by the item key using normal function
+def Sorted(li):
+    ke_y = li[1]
+    return ke_y
 
-
-
+two_d.sort(key = Sorted)
