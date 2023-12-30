@@ -654,3 +654,16 @@ mapp = list(map(lambda width: width ** 3,lam))
 fl_lam = [10,20,30,40,20,11]
 
 filtered = list(filter(lambda high: high > 20, fl_lam))
+
+#lamda for sort using 2d list
+
+two_d = [["Ibrahim",80,"A"],
+         ["Quyyum",74,"A"],
+         ["Lateef",68,"B"],
+         ["All",60,"B"]]
+
+two_d.sort()
+
+
+
+
