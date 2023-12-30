@@ -643,4 +643,10 @@ list_non = list(filter(None, non_list))
 a = lambda side: side ** 2
 print(a(4))
 
+#using lamda  function for shortand map
+lam = [2,3,4,5,6]
+
+#using lamda for mapping
+mapp = list(map(lambda width: width ** 3,lam))
+#clean and short!!
 
