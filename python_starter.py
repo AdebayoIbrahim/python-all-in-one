@@ -650,3 +650,7 @@ lam = [2,3,4,5,6]
 mapp = list(map(lambda width: width ** 3,lam))
 #clean and short!!
 
+#using lamda for filtering lists
+fl_lam = [10,20,30,40,20,11]
+
+filtered = list(filter(lambda high: high > 20, fl_lam))
