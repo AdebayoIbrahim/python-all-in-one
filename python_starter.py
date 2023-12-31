@@ -690,4 +690,7 @@ two_d.sort(key = lambda item : item[1])
 #using the classes we can create multiple INSTANCE of the object
 
 
-
+#ABSTRACTION: THIS IS THE FACILITY TO DEFINE OBJECT "ACTORS" THAT CAN
+#perform work
+#report on and cange their state
+#communicate with other objects in system
