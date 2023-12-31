@@ -753,3 +753,34 @@ matric_no = int(input("Enter Your Matric: "))
 stu_1 = Student(fname,lname,gender,matric_no)
 
 #excercise one done!
+
+
+#EXCERCISE 2!!
+#using the above create a method to print  all student info
+class Student:
+    
+    #define the objects attribues
+    def __init__(self,fname,lname,gender,matric_no):
+        self.fname = fname
+        self.lname = lname
+        self.gender = gender
+        self.matric_no = matric_no
+    
+    def Print(self):
+        print(""" Successfully created here are your details\n
+              FirstName: {f}\n
+              LastName: {l}\n
+              Gender: {g}\n
+              Matric: {m}""".format(f=fname, l=lname,g=gender,m=matric_no))
+
+
+fname = str(input("Enter Your First Name: "))
+lname = str(input("Enter Your Last Name: "))
+gender = str(input("Enter Your Gender: "))
+matric_no = int(input("Enter Your Matric: "))
+
+
+stu_1 = Student(fname,lname,gender,matric_no)
+#print out the details here:
+stu_1.Print()
+#excercise2 done!
