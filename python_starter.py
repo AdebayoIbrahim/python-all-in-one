@@ -833,3 +833,68 @@ stu_1.Print()
 stu_1.Avg(marks_arr)
 
 #Excercise 3 done!!
+
+#EXCERCISE 4!!
+#Accept marks for 7 different subjects and calculate their average
+
+class Student:
+    
+    #define the objects attribues
+    def __init__(self,fname,lname,gender,matric_no):
+        self.fname = fname
+        self.lname = lname
+        self.gender = gender
+        self.matric_no = matric_no
+    
+    #method to print details
+    def Print(self):
+        print(""" Successfully created here are your details\n
+              FirstName: {f}\n
+              LastName: {l}\n
+              Gender: {g}\n
+              Matric: {m}""".format(f=fname, l=lname,g=gender,m=matric_no))
+
+    #methos for average
+    
+    def Avg(self,markList):
+        average = sum(markList) / len(markList)
+        print("Your average mark in your best 3 is: {}".format(round(average,2)))
+    
+    #method to calculate average of 7 subjects
+    
+    def Sev_avg(self,res_li):
+        average = sum(res_li) / len(res_li)
+        print("Your average mark is: {}".format(round(average,2)))
+    
+fname = str(input("Enter Your First Name: "))
+lname = str(input("Enter Your Last Name: "))
+gender = str(input("Enter Your Gender: "))
+matric_no = int(input("Enter Your Matric: "))
+
+#for object attributes call
+stu_1 = Student(fname,lname,gender,matric_no)
+
+#for three subjects average
+marks_arr = []
+for i in range(1,4):
+    quest = int(input("Enter for Subject {}: ".format(i)))
+    marks_arr.append(quest)
+
+
+
+#CREATE-FO-7-SUBJECTS
+subject_arr = ["MTH 111","MTH 121","CSC 101","STA 114","STA 115",
+               "PHY 102","GES 107"]
+#run a loop 7 times to accept scores for each particular subject
+result_list = []
+for i in range(0,7):
+    results = int(input("Enter Your Score for {}: ".format(subject_arr[i])))
+    result_list.append(results)
+
+
+#CALL ALL
+stu_1.Print()
+stu_1.Avg(marks_arr)
+stu_1.Sev_avg(result_list)
+
+#EXCERCISE 4 Done!!!
