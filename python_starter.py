@@ -694,3 +694,7 @@ two_d.sort(key = lambda item : item[1])
 #perform work
 #report on and cange their state
 #communicate with other objects in system
+
+
+#ENCAPSULATION: THIS IS SECURING DATA IN A CLASS FOR SECURITY PURPOSE(encapsule)
+#avoid unauthorized
