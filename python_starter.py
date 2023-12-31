@@ -730,3 +730,26 @@ s2.country = "Canada"
 s2.New()
 #print(s1.fname)
 #access object method using the  positional argument of self
+
+#EXCERCISE 1 GET STUDENT DATA FROM THE USER INPUT
+#first define the class and methods then use input 
+
+class Student:
+    
+    #define the objects attribues
+    def __init__(self,fname,lname,gender,matric_no):
+        self.fname = fname
+        self.lname = lname
+        self.gender = gender
+        self.matric_no = matric_no
+
+
+fname = str(input("Enter Your First Name: "))
+lname = str(input("Enter Your Last Name: "))
+gender = str(input("Enter Your Gender: "))
+matric_no = int(input("Enter Your Matric: "))
+
+
+stu_1 = Student(fname,lname,gender,matric_no)
+
+#excercise one done!
