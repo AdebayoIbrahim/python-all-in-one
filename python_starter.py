@@ -707,8 +707,10 @@ two_d.sort(key = lambda item : item[1])
 
 
 class Student:
-    #create attributes for the methods using init keyword in python
+   #class attributes or static
+    country = "NIGERIA"
     
+    #create attributes for the methods using init keyword in python
     def __init__(self,fname,lname,gender,age,admin_no):
         self.fname = fname
         self.lname = lname
@@ -717,7 +719,7 @@ class Student:
         self.admin_no = admin_no
     
     def New(self):
-        print("Class Students OOP",self.lname)
+        print("Class Students OOP",self.lname,self.country)
 
 s1 = Student("SetUp","Ibrahim","Male",14,236586)
 
