@@ -704,3 +704,23 @@ two_d.sort(key = lambda item : item[1])
 
 #POLYMORPHISM: MEANS MORE THAN ONE FORM,IT MAKES WRITIIN AND IMPLEMENTING CODE FASTER
 #A METHOD CAN BE IN MORE THAN ONE FORM
+
+
+class Student:
+    #create attributes for the methods using init keyword in python
+    
+    def __init__(self,fname,lname,gender,age,admin_no):
+        self.fname = fname
+        self.lname = lname
+        self.gender = gender
+        self.age = age
+        self.admin_no = admin_no
+    
+    def New(self):
+        print("Class Students OOP",self.lname)
+
+s1 = Student("SetUp","Ibrahim","Male",14,236586)
+
+s1.New()
+print(s1.fname)
+#access object method using the  positional argument of self
