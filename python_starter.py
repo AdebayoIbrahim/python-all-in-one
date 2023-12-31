@@ -724,5 +724,9 @@ class Student:
 s1 = Student("SetUp","Ibrahim","Male",14,236586)
 
 s1.New()
-print(s1.fname)
+
+s2 = Student("Ibrahim", "Adebayo", "Male", 14, 236587)
+s2.country = "Canada"
+s2.New()
+#print(s1.fname)
 #access object method using the  positional argument of self
