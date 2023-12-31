@@ -784,3 +784,52 @@ stu_1 = Student(fname,lname,gender,matric_no)
 #print out the details here:
 stu_1.Print()
 #excercise2 done!
+
+
+#EXCERCISE 3!!!
+#using the above obtain the marks for 3 sujects and print the average
+
+class Student:
+    
+    #define the objects attribues
+    def __init__(self,fname,lname,gender,matric_no):
+        self.fname = fname
+        self.lname = lname
+        self.gender = gender
+        self.matric_no = matric_no
+    
+    #method to print details
+    def Print(self):
+        print(""" Successfully created here are your details\n
+              FirstName: {f}\n
+              LastName: {l}\n
+              Gender: {g}\n
+              Matric: {m}""".format(f=fname, l=lname,g=gender,m=matric_no))
+
+    #methos for average
+    
+    def Avg(self,markList):
+        average = sum(markList) / len(markList)
+        print("Your average mark in your best 3 is: {}".format(round(average,2)))
+    
+    
+    
+fname = str(input("Enter Your First Name: "))
+lname = str(input("Enter Your Last Name: "))
+gender = str(input("Enter Your Gender: "))
+matric_no = int(input("Enter Your Matric: "))
+
+
+stu_1 = Student(fname,lname,gender,matric_no)
+
+marks_arr = []
+for i in range(1,4):
+    quest = int(input("Enter for Subject {}: ".format(i)))
+    marks_arr.append(quest)
+
+#print out the details here:
+stu_1.Print()
+#perform the method
+stu_1.Avg(marks_arr)
+
+#Excercise 3 done!!
