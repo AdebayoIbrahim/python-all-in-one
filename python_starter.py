@@ -898,3 +898,29 @@ stu_1.Avg(marks_arr)
 stu_1.Sev_avg(result_list)
 
 #EXCERCISE 4 Done!!!
+
+#Instances
+#Getters(accessors) and setters(mutators)
+
+class Stu:
+    def __init__(self):
+        self.fname = "pythhon"
+        self.lname = "Programming"
+
+
+    #getters method for lname
+    def get_ln(self):
+        return self.lname
+    
+    #setters method for fname
+    def set_fn(self,val):
+        self.fname = val
+
+student = Stu()
+#getters
+print(student.get_ln())
+
+#setters
+student.set_fn("Python!")
+#print(student.fname)
+
