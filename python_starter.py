@@ -1055,3 +1055,43 @@ campus.get_uname()
 # a short example is a stuent might have access to a scolarship 
 #so we create a scolarship class and student can inherit it
 #Student(Campus,Scolarship)
+
+
+
+#SOLVE: HAVING DIRECT ATTRIBUTE  OF THE PARENT METHOD 
+#when executed inside the child it runs it owns init first then, if not found
+#it moves to the parent OBJECT
+#to solve the default inheritance functionality w introduce a super method
+#super and pass the necessary parent argument
+
+#the parent object class
+class Laptop:
+    def __init__(self,Class):
+        self.Class = Class
+
+    #gettin the method attribute
+    def get_brand(self):
+        return self.Class
+
+
+#the children
+class Type(Laptop):
+    def __init__(self,lname,Class):
+        self.lname = lname        
+        #to-fix this-we introduce super function here 
+        super().__init__(Class)
+
+     #gettin the method attribute
+    def get_name(self):
+        
+        print("Laptop name is {}".format(self.lname))
+
+
+lap_brand = "Gaming"
+lap_type = "Predator"
+
+lap = Laptop(lap_brand)
+brand = Type(lap_type,lap_brand)
+
+brand.get_brand()
+#constructor of the super class is now inherited
