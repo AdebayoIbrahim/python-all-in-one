@@ -970,3 +970,31 @@ Stu.get_club()
 #cant modify class attributes and ovject attributes
 mark = 77
 Stu.sta_cl(mark)
+
+
+#INHERITANCE METHODS EXAMPLE OOP
+class University:
+    def __init__(self,uname):
+        self.uname = uname
+        
+    def get_uname(self):
+        print("university method")
+        #return self.uname
+        
+#Student can inherit all methods from the university using(oop inheritance) class coz 
+#A student belongs to the university
+class Student(University):
+    def __init__(self,sname):
+        self.sname = sname
+            
+    def get_sname(self):
+        print("Student Mehod")
+        #return self.sname    
+
+uname = "University Of Ibadan"
+sname = "Ibrahim"
+
+un = University(uname)
+sn = Student(sname)
+
+un.get_uname()
