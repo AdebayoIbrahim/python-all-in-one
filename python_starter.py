@@ -1047,3 +1047,11 @@ stud.get_cname()
 #and also campus has access to the uni method
 campus.get_uname()
 #period...................
+
+
+
+#MULTIPLE INHERITANCE
+# A CHILD CAN INHERIT FORM A FATHER AND MOTHER e.g
+# a short example is a stuent might have access to a scolarship 
+#so we create a scolarship class and student can inherit it
+#Student(Campus,Scolarship)
