@@ -924,3 +924,49 @@ print(student.get_ln())
 student.set_fn("Python!")
 #print(student.fname)
 
+
+#Class method and Static Methods
+#class methods 
+
+class Stu:
+    
+    #class attribute
+    club = "BARCELONA"
+    
+    def __init__(self):
+        self.fname = "pythhon"
+        self.lname = "Programming"
+
+
+    #getters method for lname
+
+    def get_ln(self):
+        return self.lname
+    
+    #setters method for fname
+    def set_fn(self,val):
+        self.fname = val
+        
+        
+    #define a method to call getters of a class attribute or static 
+    #treat as a class method
+    @classmethod
+    def get_club(cls):
+        return cls.club
+    
+    #for statics 
+    @staticmethod
+    def sta_cl(mark):
+        return mark > 60
+
+pupil = Stu()
+#pupil.club
+#calling class method as getters and setters
+#same for setters instance
+Stu.get_club()
+
+
+# static uses @stticmethod with no cls or self argument
+#cant modify class attributes and ovject attributes
+mark = 77
+Stu.sta_cl(mark)
