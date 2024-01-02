@@ -1095,3 +1095,54 @@ brand = Type(lap_type,lap_brand)
 
 brand.get_brand()
 #constructor of the super class is now inherited
+
+
+#WHAT IF A MULTIPLE INHERITANCE that has to inherit two parent constructor
+
+#the parent object class
+class Laptop:
+    def __init__(self,Class):
+        self.Class = Class
+
+    #gettin the method attribute
+    def get_brand(self):
+        return self.Class
+
+
+
+#another independent class 
+class Grant:
+    def __init__(self,gname):
+        self.gname = gname
+        
+    def get_grant(self):
+        return self.gname
+
+#the children
+class Type(Laptop,Grant):
+    def __init__(self,lname,Class):
+        self.lname = lname        
+        #to-fix this-we introduce super function here 
+        super().__init__(Class)
+
+     #gettin the method attribute
+    def get_name(self):  
+        print("Laptop name is {}".format(self.lname))
+
+lap_brand = "Gaming"
+lap_type = "Predator"
+
+lap = Laptop(lap_brand)
+brand = Type(lap_type,lap_brand)
+
+brand.get_grant()
+
+#METHOD RESOLUTION ORDER IN PYTHON(MRO)
+#Python odrer of multiple class hierarchy
+#eg class Type(Laptop,Grant): in this class 
+#if they converge at another class LAptop
+#python looks for Laptop(a) and if there is an init method in it 
+# it stops class (b)
+#so wrong to say it operates the first only 
+
+
