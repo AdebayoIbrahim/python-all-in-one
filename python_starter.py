@@ -998,3 +998,52 @@ un = University(uname)
 sn = Student(sname)
 
 un.get_uname()
+
+
+
+
+#INHERITANCE MULTILEVEL INHERITANCE
+#grand-parent-class
+class University:
+    def __init__(self,uname):
+        self.uname = uname
+        
+    def get_uname(self):
+        print("university method")
+        #return self.uname
+
+
+#A Campus belongs to a university
+#parent
+class Campus(University):
+    def __init__(self,cname):
+        self.cname = cname
+        
+    def get_cname(self):
+        print("Campus Method")
+
+#A student belongs to a campus
+#children
+class Student(Campus):
+    def __init__(self,sname):
+        self.sname = sname
+            
+    def get_sname(self):
+        print("Student Mehod")
+        #return self.sname   
+
+uni2name = "University Of Ibadan"
+cname = "Computer Science"
+sname2 = "Ibrahim"
+
+
+uni2 = University(uni2name)
+campus = Campus(cname)
+stud = Student(sname2) 
+
+#student now has access to the campus and university method
+stud.get_uname()
+stud.get_cname()
+#and also campus has access to the uni method
+campus.get_uname()
+#period...................
