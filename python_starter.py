@@ -1185,3 +1185,6 @@ area(c1)
 for obj in (s1,c1):
     obj.area()
 
+#another example is the len function being applied on list and string
+#len([2,3,4]),len(1,2)
+
