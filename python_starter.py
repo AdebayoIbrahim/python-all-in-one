@@ -1146,3 +1146,34 @@ brand.get_grant()
 #so wrong to say it operates the first only 
 
 
+
+
+#POLYMORPHISM OOP
+class Square:
+    def __init__(self,width):
+        self.width = width
+    
+    #class method
+    def area(self):
+        print(self.width ** 2)
+
+
+class Circle:
+    def __init__(self,radius):
+        self.radius = radius
+        
+    def area(self):
+        print(3.14 * (self.radius ** 2))
+
+
+#POLYMORPHISM IN FUNCTIONS
+def area(obj):
+    obj.area()
+    
+    
+s1 = Square(2)
+c1 = Circle(2)
+
+area(s1)
+area(c1)
+
