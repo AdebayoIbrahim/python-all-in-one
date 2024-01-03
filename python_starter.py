@@ -1177,3 +1177,11 @@ c1 = Circle(2)
 area(s1)
 area(c1)
 
+
+#lets loop into the two classes and run my area function
+#it gives us diff results although they have same class methods
+#thats Polymorphism in Class Methods
+
+for obj in (s1,c1):
+    obj.area()
+
