@@ -1188,3 +1188,33 @@ for obj in (s1,c1):
 #another example is the len function being applied on list and string
 #len([2,3,4]),len(1,2)
 
+
+#METHOD OVERIDING IN POLYMORPHISM
+class World:
+    def define(self):
+        print("I am the world")
+
+
+class Planet(World):
+    def define(self):
+        super().define()
+        print("I am a planet")
+
+class People(World):
+    pass
+
+
+w1 = World()
+p1 = Planet()
+pl = People()
+
+#normal and expected reaction 
+#pl.define()
+
+
+p1.define()  #prints i am a planet it overrides the parent 
+#define function
+#to solve that we have to use the super() function
+
+
+#OPERATOR OVERLOADING POLYMORPHISM
