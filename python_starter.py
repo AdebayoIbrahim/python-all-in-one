@@ -1221,3 +1221,7 @@ p1.define()  #prints i am a planet it overrides the parent
 #suppose normally we can assign 
 #a = 5 # b = 10  and c = a + b 
 #  15  is expected but what happens under the #hood ?.
+
+#Python interprets it to a local int() function for both a and b 
+# and normally we know python is based on OOP
+#so, there is an object of class int with an add method in it below is a sample Code 
