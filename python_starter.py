@@ -1218,3 +1218,6 @@ p1.define()  #prints i am a planet it overrides the parent
 
 
 #OPERATOR OVERLOADING POLYMORPHISM
+#suppose normally we can assign 
+#a = 5 # b = 10  and c = a + b 
+#  15  is expected but what happens under the #hood ?.
