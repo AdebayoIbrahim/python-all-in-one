@@ -1225,3 +1225,4 @@ p1.define()  #prints i am a planet it overrides the parent
 #Python interprets it to a local int() function for both a and b 
 # and normally we know python is based on OOP
 #so, there is an object of class int with an add method in it below is a sample Code 
+#so there is a class of int with a method of __add__() this signals everytime we add + in our code
