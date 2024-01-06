@@ -1,0 +1,4 @@
+Ibrahim,UG-001,20070619,ib@gmail.com,6000
+SetUp,UG-002,20101004,setup@gmail.com,5500
+Basit,UG-003,20120508,bs@gmail.com,3900
+psyc,UG-004,20150518,syc@gmail.com,3500
