@@ -1226,3 +1226,21 @@ p1.define()  #prints i am a planet it overrides the parent
 # and normally we know python is based on OOP
 #so, there is an object of class int with an add method in it below is a sample Code 
 #so there is a class of int with a method of __add__() this signals everytime we add + in our code
+
+
+class Add:
+    def __init__(self,value):
+        self.value = value
+        
+    
+    def __add__(self,other):
+        return self.value + other
+
+a = Add(3)
+b = 4
+a.__add__(b)
+
+#operator change beaviour of methods 
+#i.e for the plus operator aboce
+#also known dunder method
+#list of operators are in python documentation or search for it
