@@ -1497,3 +1497,47 @@ b = 4
 
 print(add(a, b))
 
+
+#HANDLINg exceptions error
+#using assert and #raise
+#exceptions : using try  except finally else
+#suppose we write a program to accept user input and perform
+#a division calculation 
+
+a = input("Please enter a number : ")
+b = input("Please enter a second number : ")
+
+ans = a/b
+print(ans)
+
+#as  we noticed when a user mistakenly input a non number value it throws 
+#an error and stop executing the program!!
+#but what if we want to handle the above error andcontinue execution when 
+#we ran into an error
+#thats when we use the try except functions 
+#except s like catch in js to handle error
+a = input("Please enter a number : ")
+b = input("Please enter a second number : ")
+
+try:
+    ans  = int(a) / int(b)
+    print(ans)
+#to get the particular error use Exception like catch(err) in js
+
+#lets say we wanted to handle specific errors like valuerro or Zerodivisionerr
+#or ,we can do that as well!
+
+except ZeroDivisionError:
+    print("You cannot divide by zero!")
+
+except ValueError:
+    print("Division of a non number value is impossible")
+
+#note that every specific errors must be placed on top of the generic
+#error handling
+except Exception as error:
+    print("An error as occoured",error)
+    
+print("the code still continues outside here!")
+#now we handled the error!!
+#the error msg has been printed now!!
