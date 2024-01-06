@@ -1244,3 +1244,55 @@ a.__add__(b)
 #i.e for the plus operator aboce
 #also known dunder method
 #list of operators are in python documentation or search for it
+
+
+#example 2
+class Car:
+    def __init__(self,name,model):
+        self.model = model
+        self.name = name
+
+
+car = Car("Toyota", "venza")
+
+print(car)
+#print converts any object into a string prrof down below
+
+str(car)
+#it outputs same cryptographic value
+
+#Note: str function is also calling a method object i.e dunder method 
+#operator of __str__() lets proof it below
+
+car.__str__()
+#also prints same value but we can overide it with method operator 
+#overide below
+
+#overiding the str method 
+class Car:
+    def __init__(self,name,model):
+        self.model = model
+        self.name = name
+
+    def __str__(self):
+        print("I have been overidden")
+
+car = Car("Toyota", "venza")
+
+car.__str__()
+print(car)
+#WOW the above str now prints what we wanted compare to the first 
+#output
+
+#usage includes when we write to a file we recieve a csv output
+
+
+#PACKAGES AND MODULES IN PYTHON
+#MODULES IN PYTHON ARE PYTHON FILES
+#PACKAGES IN PYTHON ARE FOLDERS CONTAINIG PYTHON FILES
+#JUST LIKE AN EMPTY FOLDER BUT WITH A DEFAULT MAIN.PY FILE
+
+
+#creating oue own modules pls check the leran_module folder in the dierectory
+
+
