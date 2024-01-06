@@ -1295,4 +1295,40 @@ print(car)
 
 #creating oue own modules pls check the leran_module folder in the dierectory
 
+#DECORATORS IN PYTHON
+#PRE-REQUISITES
+#1.A FUNCTION IS AN OBJECT WITH A NAME
+#2. A function object can be renamed or reassigned
+#3. A function can be passed as an argument and the argument is callabale
+#4. Function object can be returned or assigned
+def accept_func(func):
+    print('inside accept')
+   
+    
+    def inner_func():
+        print("inner function")
+        func()
+    #inner_func()    
+    #lets return the inner_func object
+    return inner_func     
+
+def hello():
+    print("Hello ")
+    
+
+
+
+def greet():
+    print("How are you")
+#hello()
+#if we type hello only it returns an object of type  function
+#every func in python is an object
+#hello
+
+#h = hello
+#h()
+
+new_func = accept_func(greet)
+
+new_func()
 
