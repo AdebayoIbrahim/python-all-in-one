@@ -1541,3 +1541,21 @@ except Exception as error:
 print("the code still continues outside here!")
 #now we handled the error!!
 #the error msg has been printed now!!
+
+
+#MORE ERROR HANDLINGs
+#lets say we are trying to open a file and we want to handle some erros
+try:    
+    file_try = open("temp.txt")
+except Exception as error:
+    print("Error {} occoured".format(error))
+
+#this new else block is to perform a function if there is  no error
+else:
+    print("File Uploaded Successfully")
+
+#this finally block is to perform a function regardless of the output
+#wether an error occoured or not
+finally:
+    print("""Uploader Wizard!..........
+          \n------------------------""")
