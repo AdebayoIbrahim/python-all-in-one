@@ -1363,3 +1363,76 @@ new_func("SetUp")
 #call here
 #new_func = accept_func(greet)()
 
+
+#SAMPLE EXCERCISE
+#given this func, lets write a decorator function  
+def add(a,b):
+    c = a + b
+    return c
+
+def sub(a,b):
+    c = a - b
+    return c
+
+
+a = '2'
+b = 4
+
+sub(a, b)
+
+
+#solution
+def top(func):
+    
+    def inn_func(a,b):
+        a = int(a)
+        b = int(b)
+        return func(a,b)
+
+    return inn_func
+
+
+#def add(a,b):
+ #   c = a + b
+  #  return c
+
+def sub(a,b):
+    c = a - b
+    return c
+
+
+a = '2'
+b = 4
+
+int_add = top(add)
+int_add(a,b)
+#its outputs 6 therfore its
+
+
+#short method way using @ decorator
+
+def top(func):
+    
+    def inn_func(a,b):
+        a = int(a)
+        b = int(b)
+        return func(a,b)
+
+    return inn_func
+
+@top
+def add(a,b):
+    c = a + b
+    return c
+@top
+def sub(a,b):
+    c = a - b
+    return c
+
+
+a = '2'
+b = 4
+
+add(a, b)
+#use when u have full control of your functions
+
