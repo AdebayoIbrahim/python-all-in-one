@@ -1436,3 +1436,64 @@ b = 4
 add(a, b)
 #use when u have full control of your functions
 
+
+
+#MOST COMMON USE OF DECORATORS
+#TIME - KEEPING
+#LOGGING
+from datetime import datetime
+import time
+import logging
+def top(func):
+    
+    def inn_func(a,b):
+        
+        #start time for the function
+        st = datetime.now()
+        
+        #sleep for 1secs:to make us see some difference like setTimeout in js
+        time.sleep(1)
+        a = int(a)
+        b = int(b)
+        
+        #end-time
+        et = datetime.now()
+        #print(func.__name__)
+        result = func(a,b)
+        
+        #evaluated time
+        ev = et - st
+        
+        #create a log from the logging module
+        logging.basicConfig(filename='logging.log',level=logging.DEBUG)
+        log = logging.getLogger(func.__name__)
+        #create a message for ech logs
+        msg = "Start time {}".format(st)
+        log.info(msg)
+        msg = "End time {}".format(et)
+        log.info(msg)
+        msg = "Elapsed time {}".format(ev)
+        log.info(msg)
+        msg = "parameters are  {} and {}".format(a,b)
+        log.info(msg)
+        
+        print(ev)
+        return result
+
+    return inn_func
+
+@top
+def add(a,b):
+    c = a + b
+    return c
+@top
+def sub(a,b):
+    c = a - b
+    return c
+
+
+a = '2'
+b = 4
+
+print(add(a, b))
+
