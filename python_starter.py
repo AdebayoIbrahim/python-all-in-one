@@ -1332,3 +1332,34 @@ new_func = accept_func(greet)
 
 new_func()
 
+
+#more example 
+
+def accept_func(func):
+    print('inside accept')
+   
+    
+    def inner_func(name):
+        print("inner function")
+        func(name)
+    #inner_func()    
+    #lets return the inner_func object
+    #erase here and write return innerfunc it returns another func
+    #which leads to calling new_func()
+    return inner_func     
+
+#def hello():
+ #   print("Hello ")
+    
+
+def greet(name):
+    print("How are you",name)
+
+
+#since its two function here we have to call it twice
+new_func = accept_func(greet)
+new_func("SetUp")
+
+#call here
+#new_func = accept_func(greet)()
+
