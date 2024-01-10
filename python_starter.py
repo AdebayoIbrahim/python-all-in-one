@@ -1628,3 +1628,22 @@ finally:
 
 #close with
 #mydb.close()
+
+
+#how to alter or update or modify a table in db 
+#i.e letsadd a primary key to the table to defin a particular customer id
+# ALTER TABLE tablename the field datatype ....(additional attributes)
+
+##my db = mysql.connector.connect(
+#  host = "localhost",
+#  user = "jitesh",
+# password = "password..",
+# db = "ecommerce"
+#)
+
+#mycursor =  mydb.cursor()
+
+
+#sql = "ALTER TABLE customer ADD cut_id INT AUTO_INCREMENT PRIMARY KEY"
+#mycursor.execute(sql)
+#mydb.close()
