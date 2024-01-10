@@ -1616,3 +1616,15 @@ finally:
 #loop through
 #for i in mycursor:
     #print(i)
+
+#to delete a table
+#sql = "DROP TABLE customer"
+
+#drop a table only if exist 
+#its a good use case oz it may lead to errors if already exists
+
+#to delete a table
+#sql = "DROP TABLE IF EXIST customer"
+
+#close with
+#mydb.close()
