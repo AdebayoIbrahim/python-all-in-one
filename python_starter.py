@@ -1609,3 +1609,10 @@ finally:
 #mycursor = myydb.cursor()
 
 
+
+#sql = "SHOW TABLES"
+#mycursor.execute(sql)
+
+#loop through
+#for i in mycursor:
+    #print(i)
