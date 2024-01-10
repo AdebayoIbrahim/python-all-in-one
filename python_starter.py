@@ -1560,3 +1560,21 @@ finally:
     print("""Uploader Wizard!..........
           \n------------------------""")
 #Database Management System (DbMs)
+
+#import mysql.connector
+
+#connect to the database
+#my db = mysql.connector.connect(
+#  host = "localhost",
+#  user = "jitesh",
+# password = "password.."
+#)
+
+
+#cursor is like an errand servant that sends an recieve info from database and appication
+#create cursor
+#mycursor =  mydb.cursor()
+
+#sql = "CREATE DATABASE ecommerce"
+#execute the sql command
+#mycursor.execute(sql)
