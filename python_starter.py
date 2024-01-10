@@ -1663,5 +1663,7 @@ finally:
 #mycursor = mydb.cursor()
 #mycursor.execute(sql)
 
-
+#show values added in DB:
+  
+#    
 
