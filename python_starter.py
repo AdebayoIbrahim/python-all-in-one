@@ -1650,3 +1650,18 @@ finally:
 
 
 #INSERTING VALUES TO THE TABLE AND SELECT
+
+
+#mydb = mysql.connector.connect (
+# host = "localhost",
+#user = "setup"
+#password = "password"
+#db = "ecommerce"
+#)
+
+#sql = "INSERT INTO customer("firstname","lastname")VALUES("setup","ib")
+#mycursor = mydb.cursor()
+#mycursor.execute(sql)
+
+
+
