@@ -1587,3 +1587,14 @@ finally:
 
 #for i in mycursor:
     #print(i)
+
+#DELETE DATABASE WITH DROP
+#sql = "DROP DATABASE ecommerce"
+#mycursor.execute(sql)
+
+#close db
+#mydb.close()
+
+
+
+
