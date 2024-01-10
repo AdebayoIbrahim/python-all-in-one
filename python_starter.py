@@ -1596,5 +1596,16 @@ finally:
 #mydb.close()
 
 
+#connect to a specific database  in the lists of database using db argument
+##my db = mysql.connector.connect(
+#  host = "localhost",
+#  user = "jitesh",
+# password = "password..",
+# db = "ecommerce"
+#)
+
+
+#cursor definition
+#mycursor = myydb.cursor()
 
 
