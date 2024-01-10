@@ -1578,3 +1578,12 @@ finally:
 #sql = "CREATE DATABASE ecommerce"
 #execute the sql command
 #mycursor.execute(sql)
+
+
+#show list of databases
+#sql = "SHOW DATABESES" 
+#mycursor.execute(sql)
+#loop through and print the databases
+
+#for i in mycursor:
+    #print(i)
