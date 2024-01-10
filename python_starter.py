@@ -1665,5 +1665,7 @@ finally:
 
 #show values added in DB:
   
-#    
+  
+#sql = "Select * from customer"
+#mycursor.execute(sql)
 
