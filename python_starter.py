@@ -1647,3 +1647,6 @@ finally:
 #sql = "ALTER TABLE customer ADD cut_id INT AUTO_INCREMENT PRIMARY KEY"
 #mycursor.execute(sql)
 #mydb.close()
+
+
+#INSERTING VALUES TO THE TABLE AND SELECT
