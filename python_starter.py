@@ -1654,12 +1654,12 @@ finally:
 
 #mydb = mysql.connector.connect (
 # host = "localhost",
-#user = "setup"
-#password = "password"
+#user = "setup",
+#password = "password",
 #db = "ecommerce"
 #)
 
-#sql = "INSERT INTO customer("firstname","lastname")VALUES("setup","ib")
+#sql = "INSERT INTO customer(firstname,lastname)VALUES("setup","ib")
 #mycursor = mydb.cursor()
 #mycursor.execute(sql)
 
