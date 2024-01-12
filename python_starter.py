@@ -1721,3 +1721,16 @@ finally:
 #2val = "loll"    
 #mycursor.execute(sql,(values,2val))    
 #mydb.commit()            
+    
+    ####WEB DEVELOPMENT IN PYTHON USING FLASK
+    #RUN pip install flask
+
+#from flask inport Flask
+#create object of flask
+#app = Flask(__name__)
+
+#if __name__ = "main":
+#    app.run()    
+#
+    
+#Check the webdev folder for continuation    
