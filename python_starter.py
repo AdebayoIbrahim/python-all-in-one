@@ -1669,3 +1669,40 @@ finally:
 #sql = "Select * from customer"
 #mycursor.execute(sql)
 
+#using placeholder to insert rows into tables in data base
+
+#sql = "INSERT INTO customer(firstname,lastname)VALUES('%s',%s)"
+    
+#values = ("John","Doe")    
+# mycursor.execute(sql,values) 
+
+#what if we want to insert more than one , we will use executemany function
+
+#values = [("like","sam"),("Henry","boateng"),("loldki","sill")]        
+
+#mysursor.executemany(sql,values)
+    
+#save to db with mydb.commit()
+        
+
+#a good use case is not to use * while selecting from database use column name
+#column name is not case sensitive    
+#sql = "Select firstname,lastname from customer "    
+#mycursor.execute(sql) 
+
+
+#using where class
+    
+##sql = "Select firstname,lastname from customer  where firstname = 'Henry'"    
+#mycursor.execute(sql) 
+
+
+#using placeholder
+
+   
+##sql = "Select firstname,lastname from customer  where firstname = %s"    
+   #values = "Henry" 
+#mycursor.execute(sql,(values,)) #select is a differen usecase for placeholders
+
+
+#Delete and Updating         
