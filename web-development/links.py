@@ -16,6 +16,13 @@ def about():
 @app.route("/contact")
 def Contact():
     return "Contact Page"
+
+
+#query parameters ,variable name in routes
+@app.route("/greet-<name>")
+def Greet(name):
+    return f"Welcome {name}, How are You Doing"
+
 #if its in the current diretory
 if __name__ == "__main__":
     app.run()
