@@ -1706,3 +1706,18 @@ finally:
 
 
 #Delete and Updating         
+#sql = "DELETE from customer where firstname = %s"
+    
+#values = "John"    
+#mycursor.execute(sql,(values,))    
+    
+#Updating from the row
+
+
+
+#sql = "UPDATE firstname SET  firstname = %s where lastname = %s"
+    
+#values = "John"    
+#2val = "loll"    
+#mycursor.execute(sql,(values,2val))    
+#mydb.commit()            
