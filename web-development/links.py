@@ -15,9 +15,11 @@ def Login():
 #submit-btn-functionality
 @app.route("/submit",methods = ["POST","GET"])
 def submit():
-    result = request.form
-    return result
-
+    if request.method == 'POST':
+        result = request.form
+        return render_template("details.html",details=result)
+    else:
+        return "Invalid Parameter"
     # try:
     #     return render_template("details.html")
     # except Exception as error:
