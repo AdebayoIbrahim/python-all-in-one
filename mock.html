@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        input[type = "submit"] {
+            background: green;
+            color: white;
+            padding: 4px 16px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-family: Ubuntu;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form action="/submit" method="POST">
+            <label for="fname">Firstname</label>
+            <input type="text" name = "fname" id = "fname" required>
+
+            <label for="lname">Lastname</label>
+            <input type="text" name = "lname" id = "lname" required>
+
+
+            <input type="submit" value="Submit" >
+        </form>
+    </div>
+</body>
+</html>

@@ -7,15 +7,19 @@ app = Flask(__name__, template_folder=r"C:\Users\SetUp\Documents\python_starter\
 def Home():
     return render_template("home.html")
 
+#user form login welocme
+@app.route("/login")
+def Login():
+    return render_template("login.html")
 
-
-@app.route("/about")
+#submit-btn-functionality
+@app.route("/login/details")
 def about():
-    return render_template("about.html")
+    return render_template("details.html")
 
-@app.route("/contact")
-def Contact():
-    return render_template("contact.html")
+# @app.route("/contact")
+# def Contact():
+#     return render_template("contact.html")
 
 
 # #query parameters ,variable name in routes
