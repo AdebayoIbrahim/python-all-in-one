@@ -1,15 +1,29 @@
 # #this sis a module to add field text to the data base
 # #first connect to the db
-# import mysql.connector
+import mysql.connector
 
-# mydb = mysql.connector.connect(
-# username = "SetUp",
-# host = "localhost",
-# password = "setup123",
-# database = "forms"
-# )
+mydb = mysql.connector.connect(
+username = "SetUp",
+host = "localhost",
+password = "setup123",
+database = "forms"
+)
 
-# mycursor = mydb.cursor()
+mycursor = mydb.cursor()
+
+def addDb(firstname,lastname):
+    if firstname and lastname:
+        # mycursor.close()
+        #writting sql command to save to database
+        sql = """INSERT INTO USERS(
+        firstName,lastName
+        )VALUES({},{})""".format(firstname,lastname)
+        mycursor.execute(sql)
+    else:
+        return    
+#close db
+mycursor.close()    
+
 
 # sql  = """CREATE TABLE Users(
 # firstName VARCHAR(225),
@@ -27,3 +41,5 @@
 #     print(j)
 
 #the above is for creating database and tables in it
+
+#now our function to accept user fields and save to the database
