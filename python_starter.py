@@ -1561,32 +1561,34 @@ finally:
           \n------------------------""")
 #Database Management System (DbMs)
 
-#import mysql.connector
+import mysql.connector
 
 #connect to the database
-#my db = mysql.connector.connect(
-#  host = "localhost",
-#  user = "jitesh",
-# password = "password.."
-#)
+mydb = mysql.connector.connect(
+ host = "localhost",
+ user = "SetUp",
+ password = "setup123",
+#  auth_plugin = "caching_sha2_password"
+)
+
 
 
 #cursor is like an errand servant that sends an recieve info from database and appication
 #create cursor
-#mycursor =  mydb.cursor()
+mycursor =  mydb.cursor()
 
-#sql = "CREATE DATABASE ecommerce"
+sql = "CREATE DATABASE Forms"
 #execute the sql command
-#mycursor.execute(sql)
+mycursor.execute(sql)
 
-
+# mydb.close()
 #show list of databases
-#sql = "SHOW DATABESES" 
-#mycursor.execute(sql)
+sql = "SHOW DATABASES" 
+mycursor.execute(sql)
 #loop through and print the databases
 
-#for i in mycursor:
-    #print(i)
+for i in mycursor:
+    print(i)
 
 #DELETE DATABASE WITH DROP
 #sql = "DROP DATABASE ecommerce"
