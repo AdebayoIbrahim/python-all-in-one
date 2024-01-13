@@ -1,6 +1,9 @@
+import os
 from flask import Flask,render_template,request
 
-app = Flask(__name__, template_folder=r"C:\Users\SetUp\Documents\python_starter\web-development\templates")
+t_f = os.path.join(os.path.dirname(__file__),'templates')
+
+app = Flask(__name__, template_folder=t_f)
 
 #app.route decorator to create a link to our first webpage
 @app.route("/")
