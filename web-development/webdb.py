@@ -17,12 +17,13 @@ def addDb(firstname,lastname):
         #writting sql command to save to database
         sql = """INSERT INTO USERS(
         firstName,lastName
-        )VALUES({},{})""".format(firstname,lastname)
-        mycursor.execute(sql)
+        )VALUES(%s,%s)"""
+        mycursor.execute(sql,(firstname,lastname))
+        mydb.commit()
     else:
-        return    
+        return "Error Saving Into Data base"  
 #close db
-mycursor.close()    
+# mycursor.close()    
 
 
 # sql  = """CREATE TABLE Users(
