@@ -1,4 +1,4 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,request
 
 app = Flask(__name__, template_folder=r"C:\Users\SetUp\Documents\python_starter\web-development\templates")
 
@@ -13,9 +13,18 @@ def Login():
     return render_template("login.html")
 
 #submit-btn-functionality
-@app.route("/login/details")
-def about():
-    return render_template("details.html")
+@app.route("/submit",methods = ["POST","GET"])
+def submit():
+    result = request.form
+    return result
+
+    # try:
+    #     return render_template("details.html")
+    # except Exception as error:
+    #     print('Error'.format(error))
+
+    
+    
 
 # @app.route("/contact")
 # def Contact():
