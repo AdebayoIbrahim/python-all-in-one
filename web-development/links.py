@@ -29,7 +29,7 @@ def submit():
     
 #if its in the current diretory    
 if __name__ == "__main__":
-    app.run()    
+    app.run(debug=True)    
 
 
 # #query parameters ,variable name in routes
