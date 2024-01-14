@@ -1,6 +1,6 @@
 import os
 from flask import Flask,render_template,request
-# from webdb import addDb
+from webdb import addDb
 t_f = os.path.join(os.path.dirname(__file__),'templates')
 
 app = Flask(__name__, template_folder=t_f)
@@ -20,9 +20,9 @@ def Login():
 def submit():
     if request.method == 'POST':
         result = request.form
-        # fn = result['fname']
-        # ln = result['lname']
-        # addDb(fn,ln)
+        fn = result['fname']
+        ln = result['lname']
+        addDb(fn,ln)
         return render_template("details.html",details=result)
     else:
         return "Invalid Parameter"
