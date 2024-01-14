@@ -1736,3 +1736,11 @@ for i in mycursor:
 #
     
 #Check the webdev folder for continuation    
+
+#APIS IN PYTHON 
+#API MEANS => Application programming interface
+#Its way of connecting to applications together for development or point of interchange
+#a good use ase is a travle website where a site shows the details of different travelling agents
+#this is made possible using apis 
+#lets see how we can do that in python 
+                    
