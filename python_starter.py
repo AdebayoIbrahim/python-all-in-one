@@ -1744,3 +1744,13 @@ for i in mycursor:
 #this is made possible using apis 
 #lets see how we can do that in python 
                     
+# import requests        
+# result = requests.get('http://www.gooogle.com')          
+# print(result)
+    
+
+
+# import requests
+# result = requests.get("https://api.openweathermap.org/data/2.5/weather?q=london&appid=e79e96fad8f4304aaa405f4a70fd29a4")
+
+    
