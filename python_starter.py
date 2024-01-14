@@ -1757,4 +1757,18 @@ result = requests.get("https://api.openweathermap.org/data/2.5/weather?q=london&
 #then a dictionary inside
 data = result.json()
 print(data['main']["temp"])
-    
+
+#lets structure the api using a well formatted manner
+#requw=ests library provides a way to do that
+import requests
+params = {
+    'q':'london',
+    'appid':'e79e96fad8f4304aaa405f4a70fd29a4',
+    'units': 'metric' 
+}
+
+url = r'https://api.openweathermap.org/data/2.5/weather?'
+
+response = requests.get(url=url,params=params)
+
+
