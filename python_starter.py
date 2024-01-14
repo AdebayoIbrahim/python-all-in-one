@@ -1750,7 +1750,11 @@ for i in mycursor:
     
 
 
-# import requests
-# result = requests.get("https://api.openweathermap.org/data/2.5/weather?q=london&appid=e79e96fad8f4304aaa405f4a70fd29a4")
-
+import requests
+result = requests.get("https://api.openweathermap.org/data/2.5/weather?q=london&appid=e79e96fad8f4304aaa405f4a70fd29a4")
+#gettin the values according to the data returned
+#its in json 
+#then a dictionary inside
+data = result.json()
+print(data['main']["temp"])
     
