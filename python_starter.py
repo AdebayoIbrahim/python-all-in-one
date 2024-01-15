@@ -1770,5 +1770,6 @@ params = {
 url = r'https://api.openweathermap.org/data/2.5/weather?'
 
 response = requests.get(url=url,params=params)
-
+data = result.json()
+print(data['main']["temp"])
 
