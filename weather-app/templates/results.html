@@ -4,7 +4,7 @@
     <style>
         .container {
             margin-top: 5%;
-            margin-inline: 30% ;
+            margin-inline: 20% ;
         }
         p {
             font-size: 1.4rem; 
@@ -14,11 +14,11 @@
 
 <body>
     <div class = "container">
-        <h1>Here Are The Weather Details for <span><b>{{payload['city']}}</b></span></h1>
+        <h5>Here Are The Weather Details for <span><em>{{payload['city']}}</em></span></h5>
 
         <div>
             <p>Temperature : {{payload['temp']}}</p>
-            <p>Feels_like : {{payload['Feels_like']}}</p>
+            <p>Feels_like : {{payload['feels_like']}}</p>
             <p>Weather : {{payload['weather']}}</p>
             <p>Wind : {{payload['wind']}}</p>
         </div>    
