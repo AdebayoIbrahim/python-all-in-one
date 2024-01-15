@@ -28,13 +28,20 @@ def submit():
         #send api request
         params = {
         'q': response['city'],
+        'units': response['units'], 
         'appid':'e79e96fad8f4304aaa405f4a70fd29a4',
-        'units': 'metric' 
         }
         api_fetch = requests.get(url=url, params=params)
         data_res = api_fetch.json() 
-        return data_res
-
+        # return data_res
+        send_data = {
+            'city' : response['city'],
+            'temp' : data_res['main']['temp'],
+            'feels_like': data_res['main']['feels_like'],
+            'weather':data_res['weather'][0]['description'],
+            'wind': data_res['wind']['speed']
+        }
+        return render_template('results.html',payload = send_data)    
     else: 
         return "invalid method"
 
