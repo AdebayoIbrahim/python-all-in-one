@@ -4,6 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+          .container {
+           
+            margin-top: 5%;
+            margin-inline: 30% ;
+            /* text-align: center; */
+        }
+        input[type = "submit"] {
+            all: unset;
+            cursor: pointer;
+            background: green;
+            color: white;
+            padding: 4px 16px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-family: Ubuntu;
+            text-align: center;
+            margin-inline: auto;
+            margin-top: 20px;
+            display: block;
+        }
+
+    </style>
 </head>
 <body>
     <div class="container">
@@ -12,15 +36,28 @@
             <p>This provides some required weather information using user requsted city</p>
         </div>
 
-        <form action="" method="POST">
+        <form action="/submit" method="POST">
            
                 <div>
                     <label for="city">Enter City name :</label>
-                    <input type="text" name = "city" id = "city" required>
+                    <input type="text" name = "city" id = "city"  required>
                 </div>
     
                 <div>
-                    
+                    <p>Input unit conversion:</p>
+                    <div style="display: flex;">
+                        <label for="celcius">Celcius
+                            <input type="radio" name="units" id="celcius"
+                            value="celcius" >
+                        </label>
+                        <label for="farhenite">Farhenite
+                            <input type="radio" name="units" id="farhenite"
+                            value="farhenite" >
+                        </label>
+                        <label for="kelvin">Kelvin
+                            <input type="radio" name="units" id="kelvin" value="kelvin">
+                        </label>
+                    </div>              
                 </div>
     
     

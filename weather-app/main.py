@@ -13,8 +13,20 @@ app = Flask(__name__,template_folder=t_f)
 def Index():
     return render_template('index.html')
 
+#submission
+@app.route('/submit', methods = ["POST","GET"])
+def submit():
+    if request.method == 'POST':
+        response = request.form
+
+        return response
+        #send api request    
+    else: 
+        return "invalid method"
+
+
 
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
