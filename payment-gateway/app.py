@@ -1,6 +1,8 @@
 from flask import Flask,render_template
 import os
 
+temp_fold = os.path.join(os.path.dirname(__file__),'templates')
+
 app = Flask(__name__)
 
 
