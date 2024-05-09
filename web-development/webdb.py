@@ -19,6 +19,7 @@ def addDb(firstname,lastname):
         firstName,lastName
         )VALUES(%s,%s)"""
         mycursor.execute(sql,(firstname,lastname))
+        #note_we-didnot-use format method here coz, it is prone to sql injection
         mydb.commit()
     else:
         return "Error Saving Into Data base"  
